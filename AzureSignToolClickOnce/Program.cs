@@ -90,15 +90,6 @@ namespace AzureSignToolClickOnce
                 Console.WriteLine($"Missing option -azure-key-vault-certificate");
                 return;
             }
-            if (string.IsNullOrEmpty(description))
-            {
-                Console.WriteLine($"Missing option -description");
-                return;
-            }
-            if (string.IsNullOrEmpty(timeStampUrl))
-            {
-                Console.WriteLine($"Missing option -timestamp-sha2");
-            }
             if (string.IsNullOrEmpty(timeStampUrlRfc3161))
             {
                 Console.WriteLine($"Missing option -timestamp-rfc3161");
