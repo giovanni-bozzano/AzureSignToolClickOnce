@@ -132,6 +132,8 @@ namespace AzureSignToolClickOnce.Services
             };
             Console.WriteLine($"Signing {signtool.StartInfo.FileName} {args}");
             signtool.Start();
+            signtool.StandardError.ReadToEndAsync();
+            signtool.StandardOutput.ReadToEndAsync();
             signtool.WaitForExit();
 
             if (signtool.ExitCode == 0)
